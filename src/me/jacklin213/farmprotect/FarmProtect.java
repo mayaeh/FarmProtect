@@ -148,7 +148,7 @@ public class FarmProtect extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void soilChangePlayer(PlayerInteractEvent event) {
-		if ((event.getAction() == Action.PHYSICAL) && (event.getClickedBlock().getType() == Material.SOIL)) {
+		if ((event.getAction() == Action.PHYSICAL) && (event.getClickedBlock().getType() == Material.FARMLAND)) {
 			if (this.getConfig().getBoolean("MultiWorld")) {
 				if (worlds.contains(event.getClickedBlock().getWorld().getName().toLowerCase())) {
 					event.setCancelled(true);
@@ -161,7 +161,7 @@ public class FarmProtect extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void soilChangeEntity(EntityInteractEvent event)	{
-		if ((event.getEntityType() != EntityType.PLAYER) && (event.getBlock().getType() == Material.SOIL)) {
+		if ((event.getEntityType() != EntityType.PLAYER) && (event.getBlock().getType() == Material.FARMLAND)) {
 			if (this.getConfig().getBoolean("MultiWorld")) {
 				if (worlds.contains(event.getBlock().getWorld().getName().toLowerCase())) {
 					event.setCancelled(true);

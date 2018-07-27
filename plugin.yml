@@ -2,6 +2,7 @@ name: FarmProtect
 version: 1.8.4
 description: Stops farmland, plots , soil turning back to dirt
 author: jacklin213
+api-version: 1.13
 
 main: me.jacklin213.farmprotect.FarmProtect
 
