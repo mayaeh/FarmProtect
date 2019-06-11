@@ -1,5 +1,5 @@
 name: FarmProtect
-version: 1.8.4
+version: 1.9.0
 description: Stops farmland, plots , soil turning back to dirt
 author: jacklin213
 api-version: 1.13
@@ -19,5 +19,12 @@ permissions:
     default: op
   farmprotect.removeworld:
     default: op
+  farmprotect.toggle.*:
+    default: op
+    children:
+        farmprotect.multiworld.toggle: true
+        farmprotect.explosionprotect.toggle: true
   farmprotect.multiworld.toggle:
+    default: op
+  farmprotect.explosionprotect.toggle:
     default: op
